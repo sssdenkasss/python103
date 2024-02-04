@@ -93,7 +93,7 @@ class ImageProcessor:
         lb_image.setPixmap(pixmapimage)
         lb_image.show()
 def showChosenImage():
-    if lw_files.currentRow():
+    if lw_files.currentRow() >= 0:
         filename = lw_files.currentItem().text()
         workimage.loadImage(workdir, filename)
         image_path = os.path.join(workimage.dir, workimage.filename)
